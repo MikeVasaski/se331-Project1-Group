@@ -1,10 +1,13 @@
 <template>
-  <h1>{{ people.name }} {{ people.surname }}</h1>
-  <p>{{ people.age }}</p>
-  <p>{{ people.hometown }}</p>
-  <p>{{ people.vaccince_stat }}</p>
-  <p>{{ people.vaccine_name }}</p>
-  <p>{{ people.vaccine_date }}</p>
+  <h1>Name : {{ people.name }} {{ people.surname }}</h1>
+  <p><b>Age : </b>{{ people.age }}</p>
+  <p><b>Address : </b>{{ people.hometown }}</p>
+  <p><b>Status lastest </b></p>
+  <p><b>Vaccine Name : </b>{{ people.vaccine_name }}</p>
+  <p><b>Date : </b>{{ people.vaccine_date }}</p>
+  <p><b>Second dose </b></p>
+  <p><b>Vaccine Name : </b> {{ people.vaccine_name2 }}</p>
+  <p><b>Date : </b> {{ people.vaccine_date2 }}</p>
 
   <button @click="update">Update</button>
 </template>
