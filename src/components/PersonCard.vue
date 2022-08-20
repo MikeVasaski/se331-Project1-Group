@@ -10,9 +10,6 @@
 </template>
 <script>
 export default {
-<<<<<<<< HEAD:src/components/PatientCard.vue
-  name: "PatientCard",
-========
   name: "PersonCard",
   props: {
     people: {
@@ -20,8 +17,7 @@ export default {
       required: true,
     },
   },
->>>>>>>> origin/main:src/components/PersonCard.vue
-};
+}
 </script>
 <style scoped>
 .event-card {
