@@ -1,7 +1,7 @@
 {
     "people": [
         {
-            "uid": 100,
+            "id": 100,
             "name": "A",
             "surname": "a",
             "vaccince_stat": "first-dose",
@@ -11,7 +11,7 @@
             "vaccine_date": "April 12,2020"
         },
         {
-            "uid": 100,
+            "id": 100,
             "name": "A",
             "surname": "a",
             "vaccince_stat": "first-dose",
@@ -21,7 +21,7 @@
             "vaccine_date": "April 12,2020"
         },
         {
-            "uid": 100,
+            "id": 100,
             "name": "A",
             "surname": "a",
             "vaccince_stat": "first-dose",
@@ -31,7 +31,7 @@
             "vaccine_date": "April 12,2020"
         },
         {
-            "uid": 100,
+            "id": 100,
             "name": "A",
             "surname": "a",
             "vaccince_stat": "first-dose",
@@ -41,7 +41,7 @@
             "vaccine_date": "April 12,2020"
         },
         {
-            "uid": 100,
+            "id": 100,
             "name": "A",
             "surname": "a",
             "vaccince_stat": "first-dose",
@@ -51,7 +51,7 @@
             "vaccine_date": "April 12,2020"
         },
         {
-            "uid": 100,
+            "id": 100,
             "name": "A",
             "surname": "a",
             "vaccince_stat": "first-dose",

@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <EventCard
-      v-for="passenger in passengers"
-      :key="passenger.id"
-      :passenger="passenger"
+      v-for="people in peoples"
+      :key="people.id"
+      :people="people"
     ></EventCard>
     <div class="pagination">
       <router-link
@@ -54,16 +54,16 @@ export default {
   },
   data() {
     return {
-      passengers: null,
-      totalPassengers: 0, //<--- Added this to store totalEvents
+      peoples: null,
+      totalPeoples: 0,
     };
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
-    EventService.getPassengers(3, parseInt(routeTo.query.page) || 1)
+    EventService.getPeoples(3, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         next((comp) => {
-          comp.passengers = response.data;
-          comp.totalPassengers = response.headers["x-total-count"];
+          comp.peoples = response.data;
+          comp.totalPeoples = response.headers["x-total-count"];
         });
       })
       .catch(() => {
@@ -71,10 +71,10 @@ export default {
       });
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
-    EventService.getPassengers(3, parseInt(routeTo.query.page) || 1)
+    EventService.getPeoples(3, parseInt(routeTo.query.page) || 1)
       .then((response) => {
-        this.passengers = response.data;
-        this.totalPassengers = response.headers["x-total-count"];
+        this.peoples = response.data;
+        this.totalPeoples = response.headers["x-total-count"];
         next();
       })
       .catch(() => {
@@ -83,7 +83,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      let totalPages = Math.ceil(this.totalPassengers / this.perPage);
+      let totalPages = Math.ceil(this.totalPeoples / this.perPage);
       return this.page < totalPages;
     },
   },

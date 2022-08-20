@@ -1,15 +1,16 @@
 <template>
-  <h1>Name:{{ passenger.first_name }} {{ passenger.last_name }}</h1>
-  <p>
-    address: {{ passenger.ip_address }} on {{ passenger.Source }} @
-    {{ passenger.Destination }}
-  </p>
-  <p>{{ passenger.travelDate }}</p>
+  <h1>{{ people.name }}&&{{ people.surname }}</h1>
+  <p>{{ people.age }}</p>
+  <p>{{ people.hometown }}</p>
+  <p>{{ people.vaccince_stat }}</p>
+  <p>{{ people.vaccine_name }}</p>
+  <p>{{ people.vaccine_date }}</p>
+
   <button @click="update">Update</button>
 </template>
 <script>
 export default {
-  props: ["passenger"],
+  props: ["people"],
   inject: ["GStore"],
   methods: {
     update() {

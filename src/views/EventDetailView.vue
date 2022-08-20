@@ -1,11 +1,6 @@
 <template>
-  <div v-if="passenger">
-    <h1>{{ passenger.travelDate }}</h1>
-    <p>
-      {{ passenger.ip_address }} on {{ passenger.Source }} @
-      {{ passenger.Destination }}
-    </p>
-    <p>{{ passenger.gender }}</p>
+  <div v-if="people">
+    <h1>{{ people.name }}&&{{ people.surname }}</h1>
   </div>
 </template>
 
@@ -15,13 +10,13 @@ export default {
   props: ["id"],
   data() {
     return {
-      passenger: null,
+      people: null,
     };
   },
   created() {
-    EventService.getPassenger(this.id)
+    EventService.getPeople(this.id)
       .then((response) => {
-        this.passenger = response.data;
+        this.people = response.data;
       })
       .catch((error) => {
         console.log(error);
