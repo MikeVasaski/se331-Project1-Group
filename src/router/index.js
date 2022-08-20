@@ -20,11 +20,7 @@ const routes = [
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    component: About,
   },
 
   {
@@ -33,16 +29,13 @@ const routes = [
     props: true,
     component: EventLayout,
     beforeEnter: (to) => {
-      //<-- put API call here
       return EventService.getPeople(to.params.id) //return and params.id
         .then((response) => {
-          //still need to set the data here
           GStore.people = response.data;
         })
         .catch((error) => {
           if (error.response && error.response.status == 404) {
             return {
-              //<---Return
               name: "404Resource",
               params: { resource: "people" },
             };
