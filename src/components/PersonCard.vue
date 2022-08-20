@@ -5,7 +5,7 @@
   >
     <div class="event-card">
       <h2>{{ people.name }} {{ people.surname }}</h2>
-      <h4>{{ people.hometown }}</h4>
+      <p>{{ people.hometown }}</p>
     </div>
   </router-link>
 </template>
