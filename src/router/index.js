@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import EventDetails from "../views/event/EventDetail.vue";
-import Airlines from "../views/event/EventAirline.vue";
 import EventLayout from "../views/event/EventLayout.vue";
 import NotFoundView from "../views/NotFoundView.vue";
 import NProgress from "nprogress";
@@ -35,53 +34,29 @@ const routes = [
     component: EventLayout,
     beforeEnter: (to) => {
       //<-- put API call here
-      return (
-        EventService.getPassenger(to.params.id) //return and params.id
-          .then((response) => {
-            //still need to set the data here
-            GStore.passenger = response.data;
-          })
-          .catch((error) => {
-            if (error.response && error.response.status == 404) {
-              return {
-                //<---Return
-                name: "404Resource",
-                params: { resource: "passenger" },
-              };
-            } else {
-              return { name: "NetworkError" };
-            }
-          }),
-        EventService.getAirline(to.params.id) //return and params.id
-          .then((response) => {
-            //still need to set the data here
-            GStore.airline = response.data;
-          })
-          .catch((error) => {
-            if (error.response && error.response.status == 404) {
-              return {
-                //<---Return
-                name: "404Resource",
-                params: { resource: "passenger" },
-              };
-            } else {
-              return { name: "NetworkError" };
-            }
-          })
-      );
+      return EventService.getPeople(to.params.id) //return and params.id
+        .then((response) => {
+          //still need to set the data here
+          GStore.people = response.data;
+        })
+        .catch((error) => {
+          if (error.response && error.response.status == 404) {
+            return {
+              //<---Return
+              name: "404Resource",
+              params: { resource: "people" },
+            };
+          } else {
+            return { name: "NetworkError" };
+          }
+        });
     },
     children: [
       {
-        path: "passenger/:id",
+        path: "people/:id",
         name: "EventDetails",
         component: EventDetails,
         props: true,
-      },
-      {
-        path: "airline/:id",
-        name: "airlines",
-        component: Airlines,
-        prop: true,
       },
     ],
   },
