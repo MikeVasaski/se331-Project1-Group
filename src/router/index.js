@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import EventDetails from "../views/event/EventDetail.vue";
-import EventLayout from "../views/event/EventLayout.vue";
-import NotFoundView from "../views/NotFoundView.vue";
+import HomeView from "@/views/HomeView.vue";
+import About from "@/views/AboutView.vue";
+import EventDetails from "@/views/event/EventDetail.vue";
+import EventLayout from "@/views/event/EventLayout.vue";
+import NotFoundView from "@/views/NotFoundView.vue";
 import NProgress from "nprogress";
 import EventService from "@/service/EventService.js";
 import GStore from "@/store";
