@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <EventCard
+    <PatientCard
       v-for="passenger in passengers"
       :key="passenger.id"
       :passenger="passenger"
-    ></EventCard>
+    ></PatientCard>
     <div class="pagination">
       <router-link
         id="page-prev"
@@ -35,7 +35,7 @@
 <script>
 // @ is an alias to /src
 
-import EventCard from "@/components/EventCard.vue";
+import PatientCard from "@/components/PatientCard.vue";
 import EventService from "@/service/EventService";
 export default {
   name: "HomeView",

@@ -11,13 +11,7 @@
 </template>
 <script>
 export default {
-  name: "EventCard",
-  props: {
-    passenger: {
-      type: Object,
-      required: true,
-    },
-  },
+  name: "PatientCard",
 };
 </script>
 <style scoped>
