@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://my-json-server.typicode.com/MikeVasaski/se331-Project1-Group",
+  baseURL:
+    "https://my-json-server.typicode.com/MikeVasaski/se331-Project1-Group",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -14,10 +15,7 @@ export default {
     return apiClient.get("/passenger?_page=" + page + " &_limit=" + perPage);
   },
   //Added new call
-  getPassenger(id) {
-    return apiClient.get("/passenger/" + id);
-  },
-  getAirline(id) {
-    return apiClient.get("/airline/" + id);
-  },
+  getPassenger(uid) {
+    return apiClient.get("/people/" + uid);
+  }
 };
