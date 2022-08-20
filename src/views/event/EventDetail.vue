@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ people.name }}&&{{ people.surname }}</h1>
+  <h1>{{ people.name }} {{ people.surname }}</h1>
   <p>{{ people.age }}</p>
   <p>{{ people.hometown }}</p>
   <p>{{ people.vaccince_stat }}</p>

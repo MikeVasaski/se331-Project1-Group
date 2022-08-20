@@ -1,19 +1,18 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'EventDetails', params: { id: passenger.id } }"
+    :to="{ name: 'EventDetails', params: { id: people.id } }"
   >
     <div class="event-card">
-      <h4>{{ passenger.first_name }} on {{ passenger.last_name }}</h4>
-      <span>{{ passenger.email }}</span>
+      <h4>{{ people.name }} on {{ people.surname }}</h4>
     </div>
   </router-link>
 </template>
 <script>
 export default {
-  name: "EventCard",
+  name: "PersonCard",
   props: {
-    passenger: {
+    people: {
       type: Object,
       required: true,
     },

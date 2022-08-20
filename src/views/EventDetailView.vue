@@ -1,6 +1,6 @@
 <template>
   <div v-if="people">
-    <h1>{{ people.name }}&&{{ people.surname }}</h1>
+    <h1>{{ people.name }} {{ people.surname }}</h1>
   </div>
 </template>
 

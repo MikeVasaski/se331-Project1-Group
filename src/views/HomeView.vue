@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <EventCard
+    <PersonCard
       v-for="people in peoples"
       :key="people.id"
       :people="people"
-    ></EventCard>
+    ></PersonCard>
     <div class="pagination">
       <router-link
         id="page-prev"
@@ -35,7 +35,7 @@
 <script>
 // @ is an alias to /src
 
-import EventCard from "@/components/EventCard.vue";
+import PersonCard from "@/components/PersonCard.vue";
 import EventService from "@/service/EventService";
 export default {
   name: "HomeView",
@@ -50,7 +50,7 @@ export default {
     },
   },
   components: {
-    EventCard,
+    PersonCard,
   },
   data() {
     return {
