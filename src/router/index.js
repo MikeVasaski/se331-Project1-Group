@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import EventDetails from "../views/event/EventDetail.vue";
+import EventDoctor from "../views/event/EventDoctor.vue";
+import EventVaccine from "../views/event/EventVaccine.vue";
 import EventLayout from "../views/event/EventLayout.vue";
 import NotFoundView from "../views/NotFoundView.vue";
 import NProgress from "nprogress";
@@ -56,6 +58,18 @@ const routes = [
         path: "people/:id",
         name: "EventDetails",
         component: EventDetails,
+        props: true,
+      },
+      {
+        path: "people/:id",
+        name: "Doctor",
+        component: EventDoctor,
+        props: true,
+      },
+      {
+        path: "people/:id",
+        name: "Vaccine",
+        component: EventVaccine,
         props: true,
       },
     ],

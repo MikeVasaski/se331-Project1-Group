@@ -1,8 +1,11 @@
 <template>
-  <h1>Name : {{ people.name }} {{ people.surname }}</h1>
-  <p><b>Age : </b>{{ people.age }}</p>
-  <p><b>Address : </b>{{ people.hometown }}</p>
-
+  <p><b>Lastest Status </b></p>
+  <p><b>First dose </b></p>
+  <p><b>Vaccine Name : </b>{{ people.vaccine_name }}</p>
+  <p><b>Date : </b>{{ people.vaccine_date }}</p>
+  <p><b>Second dose </b></p>
+  <p><b>Vaccine Name : </b> {{ people.vaccine_name2 }}</p>
+  <p><b>Date : </b> {{ people.vaccine_date2 }}</p>
   <button @click="update">Update</button>
 </template>
 <script>
