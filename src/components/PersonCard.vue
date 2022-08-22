@@ -9,8 +9,8 @@
         <h2>Name: {{ people.name }} {{ people.surname }}</h2>
         <p>
           <i>
-            Vaccince status: {{ people.vaccince_stat }},
-            {{ people.vaccince_stat2 }}
+            Vaccince status:
+            <b>{{ people.vaccince_stat }}, {{ people.vaccince_stat2 }}</b>
           </i>
         </p>
       </div>
@@ -51,7 +51,8 @@ export default {
   text-decoration: none;
   text-align: left;
 }
-#content {
+.event-card #content {
+  margin-top: 16px;
   margin-left: 28px;
 }
 </style>
