@@ -1,79 +1,23 @@
 <template>
-  <form class="review-form" @submit.prevent="onSubmit">
-    <h3>Leave a review</h3>
-    <label for="name">Name:</label>
-    <input id="name" v-model="name" />
-
-    <label for="review">Review:</label>
-    <textarea id="review" v-model="review"></textarea>
-    <label for="rating">Rating:</label>
-    <select id="rating" v-model.number="rating">
-      <option>5</option>
-      <option>4</option>
-      <option>3</option>
-      <option>2</option>
-      <option>1</option>
-    </select>
-
-    <input class="button" type="submit" value="Submit" />
-  </form>
-
-  <div class="review-container">
-    <h3>Reviews:</h3>
-    <ul>
-      <li v-for="(review, index) in reviews" :key="index">
-        {{ review.name }} gave this {{ review.rating }} stars
-        <br />
-        "{{ review.review }}"
-        <br />
-        <p>Would recommend: {{ review.wouldRecommend ? "yes" : "no" }}</p>
-      </li>
-    </ul>
-  </div>
-
-  <review-form @review-submitted="addReview"></review-form>
+  <ReviewForm @review-submited="addReview" />
+  <ReviewList v-if="GStore.reviews" :reviews="GStore.people.doctor_com" />
 </template>
 
 <script>
+import ReviewForm from "@/components/ReviewForm.vue";
+import ReviewList from "@/components/ReviewList.vue";
+import GStore from "@/store";
 export default {
-  props: ["people"],
-  reviews: {
-    type: Array,
-    required: true,
-  },
-
+  inject: ["GStore"],
+  components: { ReviewForm, ReviewList },
   methods: {
-    data() {
-      return {
-        name: "",
-        review: "",
-        rating: null,
-        wouldRecommend: false,
-      };
+    addReview(review) {
+      this.GStore.reviews.push(review);
+      GStore.people.doctor_com = GStore.reviews.filter(
+        (people) => GStore.people.id == people.patient_id
+      );
+      console.log(GStore.reviews.patient_id);
     },
-    methods: {
-      onSubmit() {
-        if (this.name === "" || this.review === "" || this.rating === null) {
-          alert("Review is incomplete. Please fill out every field.");
-          return;
-        }
-        let productReview = {
-          name: this.name,
-          review: this.review,
-          rating: this.rating,
-          wouldRecommend: this.wouldRecommend,
-        };
-        this.$emit("review-submitted", productReview);
-
-        this.name = "";
-        this.review = "";
-        this.rating = null;
-        this.wouldRecommend = false;
-      },
-    },
-  },
-  addReview(review) {
-    this.reviews.push(review);
   },
 };
 </script>

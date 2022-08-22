@@ -11,7 +11,8 @@
             "vaccine_date": "January 22, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "PfizerBioNTech",
-            "vaccine_date2": "March 22, 2021"
+            "vaccine_date2": "March 22, 2021",
+            "doctor_com":[]
         },
         {
             "id": 2,
@@ -24,7 +25,8 @@
             "vaccine_date": "February 9, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Sputnik Light",
-            "vaccine_date2": "June 11, 2021"
+            "vaccine_date2": "June 11, 2021",
+            "doctor_com":[]
         },
         {
             "id": 3,
@@ -37,7 +39,8 @@
             "vaccine_date": "February 26, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Sputnik V",
-            "vaccine_date2": "June 16, 2021"
+            "vaccine_date2": "June 16, 2021",
+            "doctor_com":[]
         },
         {
             "id": 4,
@@ -50,7 +53,8 @@
             "vaccine_date": "July 1, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Novavax",
-            "vaccine_date2": "October 5, 2021"
+            "vaccine_date2": "October 5, 2021",
+            "doctor_com":[]
         },
         {
             "id": 5,
@@ -63,7 +67,8 @@
             "vaccine_date": "October 30, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "AstraZeneca",
-            "vaccine_date2": "January 16, 2022"
+            "vaccine_date2": "January 16, 2022",
+            "doctor_com":[]
         },
         {
             "id": 6,
@@ -76,7 +81,8 @@
             "vaccine_date": "January 6, 2022",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Soberana Plus",
-            "vaccine_date2": "May 1, 2022"
+            "vaccine_date2": "May 1, 2022",
+            "doctor_com":[]
         },
         {
             "id": 7,
@@ -89,7 +95,8 @@
             "vaccine_date": "January 16, 2022",
             "vaccince_stat2": "",
             "vaccine_name2": "",
-            "vaccine_date2": ""
+            "vaccine_date2": "",
+            "doctor_com":[]
         },
         {
             "id": 8,
@@ -102,7 +109,8 @@
             "vaccine_date": "December 22, 2021",
             "vaccince_stat2": "",
             "vaccine_name2": "",
-            "vaccine_date2": ""
+            "vaccine_date2": "",
+            "doctor_com":[]
         },
         {
             "id": 9,
@@ -115,7 +123,8 @@
             "vaccine_date": "June 28, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "October 28, 2021"
+            "vaccine_date2": "October 28, 2021",
+            "doctor_com":[]
         },
         {
             "id": 10,
@@ -128,7 +137,8 @@
             "vaccine_date": "August 27, 2020",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "December 28, 2020"
+            "vaccine_date2": "December 28, 2020",
+            "doctor_com":[]
         },
         {
             "id": 11,
@@ -141,7 +151,8 @@
             "vaccine_date": "February 26, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "April 26, 2021"
+            "vaccine_date2": "April 26, 2021",
+            "doctor_com":[]
         },
         {
             "id": 12,
@@ -154,7 +165,8 @@
             "vaccine_date": "January 10, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "June 10, 2021"
+            "vaccine_date2": "June 10, 2021",
+            "doctor_com":[]
         },
         {
             "id": 13,
@@ -167,7 +179,8 @@
             "vaccine_date": "March 22, 2020",
             "vaccince_stat2": "",
             "vaccine_name2": "",
-            "vaccine_date2": ""
+            "vaccine_date2": "",
+            "doctor_com":[]
         },
         {
             "id": 14,
@@ -180,7 +193,8 @@
             "vaccine_date": "March 22, 2020",
             "vaccince_stat2": "",
             "vaccine_name2": "",
-            "vaccine_date2": ""
+            "vaccine_date2": "",
+            "doctor_com":[]
         },
         {
             "id": 15,
@@ -193,7 +207,8 @@
             "vaccine_date": "March 22, 2020",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "August 22, 2020"
+            "vaccine_date2": "August 22, 2020",
+            "doctor_com":[]
         },
         {
             "id": 16,
@@ -206,7 +221,8 @@
             "vaccine_date": "May 12, 2021",
             "vaccince_stat2": "",
             "vaccine_name2": "",
-            "vaccine_date2": ""
+            "vaccine_date2": "",
+            "doctor_com":[]
         },
         {
             "id": 17,
@@ -219,7 +235,8 @@
             "vaccine_date": "June 28, 2021",
             "vaccince_stat2": "",
             "vaccine_name2": "",
-            "vaccine_date2": ""
+            "vaccine_date2": "",
+            "doctor_com":[]
         },
         {
             "id": 18,
@@ -232,7 +249,8 @@
             "vaccine_date": "April 18, 2020",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "July 18, 2020"
+            "vaccine_date2": "July 18, 2020",
+            "doctor_com":[]
         },
         {
             "id": 19,
@@ -245,7 +263,8 @@
             "vaccine_date": "April 18, 2020",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "July 18, 2020"
+            "vaccine_date2": "July 18, 2020",
+            "doctor_com":[]
         },
         {
             "id": 20,
@@ -258,7 +277,8 @@
             "vaccine_date": "December 11, 2021",
             "vaccince_stat2": "Second-dose",
             "vaccine_name2": "Moderna",
-            "vaccine_date2": "March 11, 2022"
+            "vaccine_date2": "March 11, 2022",
+            "doctor_com":[]
         }
     ]
 }

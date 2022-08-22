@@ -1,15 +1,15 @@
 <template>
   <div>
     <form class="review-form" @submit.prevent="onSubmit">
-      <h3>Doctor's Suggestion Form</h3>
-      <label for="date">Date:</label>
+      <h3>Doctor Suggestion </h3>
+      <label for="suggestion">Comment:</label>
+      <textarea id="suggestion" v-model="suggestion"></textarea>
+
+      <label for="date">Name:</label>
       <input id="date" v-model="date" />
 
-      <label for="name">Doctor's Name:</label>
+      <label for="name">Email:</label>
       <input id="name" v-model="name" />
-
-      <label for="suggestion">Suggestion:</label>
-      <textarea id="suggestion" v-model="suggestion"></textarea>
 
       <input class="button" type="submit" value="Submit" />
     </form>
@@ -34,11 +34,12 @@ export default {
         alert("This Form is incomplete. Please fill out evert field.");
         return;
       }
+
       let productReview = {
         name: this.name,
         suggestion: this.suggestion,
         date: this.date,
-        patient_id: GStore.event.id,
+        patient_id: GStore.people.id,
       };
       this.$emit("review-submited", productReview);
       this.patient_id = "";
@@ -64,6 +65,7 @@ body {
   font-family: tahoma;
   color: #282828;
 }
+
 .review-form {
   display: flex;
   flex-direction: column;
@@ -78,6 +80,7 @@ body {
   margin: auto;
   padding: 3%;
 }
+
 .review-container {
   width: 425px;
   padding: 20px;
@@ -88,19 +91,23 @@ body {
   margin-left: 40px;
   border: 2px solid #ffffff;
 }
+
 .review-container li {
   margin-top: 15px;
 }
+
 .review-form .button {
   display: block;
   margin: 30px auto;
 }
+
 select {
   height: 40px;
   font-size: 20px;
   background-color: white;
   cursor: pointer;
 }
+
 textarea {
   width: 95%;
   height: 70px;
@@ -108,9 +115,11 @@ textarea {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
 ul {
   list-style-type: none;
 }
+
 .button {
   margin: 30px;
   background-color: #39495c;
