@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>People' vaccinated</h1>
     <PersonCard
       v-for="people in peoples"
       :key="people.id"
@@ -59,7 +60,7 @@ export default {
     };
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
-    EventService.getPeoples(3, parseInt(routeTo.query.page) || 1)
+    EventService.getPeoples(5, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         next((comp) => {
           comp.peoples = response.data;
@@ -71,7 +72,7 @@ export default {
       });
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
-    EventService.getPeoples(3, parseInt(routeTo.query.page) || 1)
+    EventService.getPeoples(5, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         this.peoples = response.data;
         this.totalPeoples = response.headers["x-total-count"];
@@ -83,7 +84,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      let totalPages = Math.ceil(this.totalPeoples / this.perPage);
+      let totalPages = Math.ceil(this.totalPeoples / 5);
       return this.page < totalPages;
     },
   },
