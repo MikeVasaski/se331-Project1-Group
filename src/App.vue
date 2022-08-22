@@ -2,10 +2,10 @@
   <div id="flashMessage" v-if="GStore.flashMessage">
     {{ GStore.flashMessage }}
   </div>
-  <nav>
+  <b-navbar toggleable="lg" type="dark" variant="info">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </nav>
+  </b-navbar>
   <router-view />
 </template>
 
