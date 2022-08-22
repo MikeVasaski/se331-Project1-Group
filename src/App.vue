@@ -26,6 +26,9 @@ export default {
     background: transparent;
   }
 }
+body {
+  background-color: darkgray;
+}
 #flashMessage {
   animation-name: yellowfade;
   animation-duration: 5s;
@@ -37,23 +40,16 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
 nav {
   background-color: #b98142;
   padding: 30px;
 }
-
 nav a {
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
 }
-
 nav a.router-link-exact-active {
   color: #ffffff;
-}
-
-.topnav {
-  text-align: left;
 }
 </style>
