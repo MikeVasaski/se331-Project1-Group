@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="review-form" @submit.prevent="onSubmit">
-      <h3>Doctor Suggestion </h3>
+      <h3>Doctor Suggestion</h3>
       <label for="suggestion">Comment:</label>
       <textarea id="suggestion" v-model="suggestion"></textarea>
 
