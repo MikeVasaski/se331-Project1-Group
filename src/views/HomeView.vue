@@ -1,11 +1,14 @@
 <template>
+  <h1>People' vaccinated</h1>
   <div class="home">
     <PersonCard
       v-for="people in peoples"
       :key="people.id"
       :people="people"
     ></PersonCard>
-    <div class="pagination">
+  </div>
+  <div class="pagination">
+    <div class="btn">
       <router-link
         id="page-prev"
         :to="{
@@ -17,6 +20,8 @@
       >
         Prev Page</router-link
       >
+    </div>
+    <div class="btn">
       <router-link
         id="page-next"
         :to="{
@@ -59,7 +64,7 @@ export default {
     };
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
-    EventService.getPeoples(3, parseInt(routeTo.query.page) || 1)
+    EventService.getPeoples(6, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         next((comp) => {
           comp.peoples = response.data;
@@ -71,7 +76,7 @@ export default {
       });
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
-    EventService.getPeoples(3, parseInt(routeTo.query.page) || 1)
+    EventService.getPeoples(6, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         this.peoples = response.data;
         this.totalPeoples = response.headers["x-total-count"];
@@ -83,7 +88,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      let totalPages = Math.ceil(this.totalPeoples / this.perPage);
+      let totalPages = Math.ceil(this.totalPeoples / 6);
       return this.page < totalPages;
     },
   },
@@ -92,22 +97,33 @@ export default {
 <style scoped>
 .home {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
 }
 .pagination {
   display: flex;
-  width: 290px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .pagination a {
   flex: 1;
   text-decoration: none;
-  color: #2c3e50;
+  color: #fff;
+  padding: 10px;
 }
 #page-prev {
   text-align: left;
 }
 #page-next {
   text-align: right;
+}
+.btn {
+  border: 2px solid #000;
+  background-color: brown;
 }
 </style>
