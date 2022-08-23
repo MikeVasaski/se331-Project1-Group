@@ -38,18 +38,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #130d35;
+  display: flex;
+  flex-direction: column;
 }
 nav {
-  background-color: #b98142;
+  background-color: #072e55;
   padding: 30px;
+  font-size: 36px;
 }
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
   text-decoration: none;
 }
 nav a.router-link-exact-active {
-  color: #ffffff;
+  color: #00b8d8;
 }
 </style>

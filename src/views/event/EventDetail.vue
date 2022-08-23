@@ -1,8 +1,9 @@
 <template>
-  <h1>Name : {{ people.name }} {{ people.surname }}</h1>
-  <p><b>Age : </b>{{ people.age }}</p>
-  <p><b>Address : </b>{{ people.hometown }}</p>
-
+  <div class="detail">
+    <h1>Name: {{ people.name }} {{ people.surname }}</h1>
+    <p><b>Age: </b>{{ people.age }}</p>
+    <p><b>Address: </b>{{ people.hometown }}</p>
+  </div>
   <button @click="update">Update</button>
 </template>
 <script>
@@ -22,3 +23,12 @@ export default {
   },
 };
 </script>
+<style scoped>
+.detail h1,
+p {
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0px;
+  text-align: left;
+}
+</style>
