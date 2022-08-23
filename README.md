@@ -1,24 +1,6 @@
-# lab0405
+# se331-Project1-Group
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Project Name
+1.632115011 Jeerasak Tara
+2.632115030 Padungkiat Leksri
+3.632115034 Yasinthon Roekkamyee

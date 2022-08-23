@@ -1,11 +1,13 @@
 <template>
-  <div id="flashMessage" v-if="GStore.flashMessage">
-    {{ GStore.flashMessage }}
+  <div class="topnav">
+    <div id="flashMessage" v-if="GStore.flashMessage">
+      {{ GStore.flashMessage }}
+    </div>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
   </div>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view />
 </template>
 
@@ -24,6 +26,9 @@ export default {
     background: transparent;
   }
 }
+body {
+  background-color: darkgray;
+}
 #flashMessage {
   animation-name: yellowfade;
   animation-duration: 5s;
@@ -33,19 +38,21 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #130d35;
+  display: flex;
+  flex-direction: column;
 }
-
 nav {
+  background-color: #072e55;
   padding: 30px;
+  font-size: 36px;
 }
-
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
+  text-decoration: none;
 }
-
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #00b8d8;
 }
 </style>

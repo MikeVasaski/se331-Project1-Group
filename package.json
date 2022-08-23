@@ -1,5 +1,5 @@
 {
-  "name": "Project1",
+  "name": "project1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
     "core-js": "^3.8.3",
     "nprogress": "^0.2.0",
     "vue": "^3.2.13",
