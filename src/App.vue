@@ -20,14 +20,14 @@ export default {
 <style>
 @keyframes yellowfade {
   from {
-    background: yellow;
+    background: #ffa633;
   }
   to {
     background: transparent;
   }
 }
 body {
-  background-color: darkgray;
+  background-color: #3b5a9d;
 }
 #flashMessage {
   animation-name: yellowfade;
@@ -43,7 +43,8 @@ body {
   flex-direction: column;
 }
 nav {
-  background-color: #072e55;
+  text-align: left;
+  background-color: #4fb2aa;
   padding: 30px;
   font-size: 36px;
 }
@@ -53,6 +54,6 @@ nav a {
   text-decoration: none;
 }
 nav a.router-link-exact-active {
-  color: #00b8d8;
+  color: #ffa633;
 }
 </style>
