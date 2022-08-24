@@ -18,9 +18,9 @@
 
 <script>
 export default {
-  inject: ["GStore"],
-  props: ["reviews"],
-};
+  inject: ['GStore'],
+  props: ['reviews']
+}
 </script>
 
 <style>

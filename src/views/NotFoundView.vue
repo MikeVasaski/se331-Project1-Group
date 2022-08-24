@@ -11,8 +11,8 @@ export default {
     resource: {
       type: String,
       required: true,
-      default: "page",
-    },
-  },
-};
+      default: 'page'
+    }
+  }
+}
 </script>

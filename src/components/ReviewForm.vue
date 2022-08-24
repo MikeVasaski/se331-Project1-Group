@@ -17,42 +17,42 @@
 </template>
 
 <script>
-import GStore from "@/store";
+import GStore from '@/store'
 export default {
-  inject: ["GStore"],
+  inject: ['GStore'],
   data() {
     return {
-      patient_id: "",
+      patient_id: '',
       name: null,
-      suggestion: "",
-      date: "",
-    };
+      suggestion: '',
+      date: ''
+    }
   },
   methods: {
     onSubmit() {
-      if (this.name === "" || this.suggestion === "" || this.date === "") {
-        alert("This Form is incomplete. Please fill out evert field.");
-        return;
+      if (this.name === '' || this.suggestion === '' || this.date === '') {
+        alert('This Form is incomplete. Please fill out evert field.')
+        return
       }
 
       let productReview = {
         name: this.name,
         suggestion: this.suggestion,
         date: this.date,
-        patient_id: GStore.people.id,
-      };
-      this.$emit("review-submited", productReview);
-      this.patient_id = "";
-      this.name = "";
-      this.suggestion = "";
-      this.date = "";
-      this.GStore.flashMessage = "Doctor's suggestion successfully! ";
+        patient_id: GStore.people.id
+      }
+      this.$emit('review-submited', productReview)
+      this.patient_id = ''
+      this.name = ''
+      this.suggestion = ''
+      this.date = ''
+      this.GStore.flashMessage = "Doctor's suggestion successfully! "
       setTimeout(() => {
-        this.GStore.flashMessage = "";
-      }, 3000);
-    },
-  },
-};
+        this.GStore.flashMessage = ''
+      }, 3000)
+    }
+  }
+}
 </script>
 
 <style scoped>

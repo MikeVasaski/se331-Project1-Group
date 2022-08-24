@@ -13,8 +13,8 @@
 
 <script>
 export default {
-  inject: ["GStore"],
-};
+  inject: ['GStore']
+}
 </script>
 
 <style>

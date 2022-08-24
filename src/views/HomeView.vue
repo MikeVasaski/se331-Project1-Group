@@ -13,7 +13,7 @@
         id="page-prev"
         :to="{
           name: 'home',
-          query: { page: page - 1 },
+          query: { page: page - 1 }
         }"
         rel="prev"
         v-if="page != 1"
@@ -26,7 +26,7 @@
         id="page-next"
         :to="{
           name: 'home',
-          query: { page: page + 1 },
+          query: { page: page + 1 }
         }"
         rel="next"
         v-if="hasNextPage"
@@ -40,59 +40,59 @@
 <script>
 // @ is an alias to /src
 
-import PersonCard from "@/components/PersonCard.vue";
-import EventService from "@/service/EventService";
+import PersonCard from '@/components/PersonCard.vue'
+import EventService from '@/service/EventService'
 export default {
-  name: "HomeView",
+  name: 'HomeView',
   props: {
     page: {
       type: Number,
-      required: true,
+      required: true
     },
     perPage: {
       type: Number,
-      required: true,
-    },
+      required: true
+    }
   },
   components: {
-    PersonCard,
+    PersonCard
   },
   data() {
     return {
       peoples: null,
-      totalPeoples: 0,
-    };
+      totalPeoples: 0
+    }
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
     EventService.getPeoples(6, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         next((comp) => {
-          comp.peoples = response.data;
-          comp.totalPeoples = response.headers["x-total-count"];
-        });
+          comp.peoples = response.data
+          comp.totalPeoples = response.headers['x-total-count']
+        })
       })
       .catch(() => {
-        next({ name: "NetworkError" });
-      });
+        next({ name: 'NetworkError' })
+      })
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
     EventService.getPeoples(6, parseInt(routeTo.query.page) || 1)
       .then((response) => {
-        this.peoples = response.data;
-        this.totalPeoples = response.headers["x-total-count"];
-        next();
+        this.peoples = response.data
+        this.totalPeoples = response.headers['x-total-count']
+        next()
       })
       .catch(() => {
-        next({ name: "NetworkError" });
-      });
+        next({ name: 'NetworkError' })
+      })
   },
   computed: {
     hasNextPage() {
-      let totalPages = Math.ceil(this.totalPeoples / 6);
-      return this.page < totalPages;
-    },
-  },
-};
+      let totalPages = Math.ceil(this.totalPeoples / 6)
+      return this.page < totalPages
+    }
+  }
+}
 </script>
 <style scoped>
 h1 {
@@ -110,8 +110,8 @@ h1 {
   justify-content: space-around;
   align-items: center;
   font-size: 16px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .pagination a {
   flex: 1;

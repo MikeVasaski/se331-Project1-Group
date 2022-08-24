@@ -5,22 +5,22 @@
 </template>
 
 <script>
-import EventService from "../service/EventService";
+import EventService from '../service/EventService'
 export default {
-  props: ["id"],
+  props: ['id'],
   data() {
     return {
-      people: null,
-    };
+      people: null
+    }
   },
   created() {
     EventService.getPeople(this.id)
       .then((response) => {
-        this.people = response.data;
+        this.people = response.data
       })
       .catch((error) => {
-        console.log(error);
-      });
-  },
-};
+        console.log(error)
+      })
+  }
+}
 </script>

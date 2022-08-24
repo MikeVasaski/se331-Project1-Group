@@ -19,14 +19,14 @@
 </template>
 <script>
 export default {
-  name: "PersonCard",
+  name: 'PersonCard',
   props: {
     people: {
       type: Object,
-      required: true,
-    },
-  },
-};
+      required: true
+    }
+  }
+}
 </script>
 <style scoped>
 .event-card {

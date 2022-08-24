@@ -10,8 +10,8 @@
 </template>
 <script>
 export default {
-  inject: ["GStore"],
-};
+  inject: ['GStore']
+}
 </script>
 <style scoped>
 .content {
@@ -29,8 +29,8 @@ export default {
 }
 #nav {
   text-align: left;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 24px;
   margin-top: 24px;
   color: black;

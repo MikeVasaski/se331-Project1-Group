@@ -20,8 +20,8 @@
 </template>
 <script>
 export default {
-  props: ["people"],
-};
+  props: ['people']
+}
 </script>
 <style scoped>
 .vacc p {

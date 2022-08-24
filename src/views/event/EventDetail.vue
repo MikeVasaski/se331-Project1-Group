@@ -8,20 +8,20 @@
 </template>
 <script>
 export default {
-  props: ["people"],
-  inject: ["GStore"],
+  props: ['people'],
+  inject: ['GStore'],
   methods: {
     update() {
-      this.GStore.flashMessage = "You are successfully update details ";
+      this.GStore.flashMessage = 'You are successfully update details '
       setTimeout(() => {
-        this.GStore.flashMessage = "";
-      }, 5000);
+        this.GStore.flashMessage = ''
+      }, 5000)
       this.$router.push({
-        name: "home",
-      });
-    },
-  },
-};
+        name: 'home'
+      })
+    }
+  }
+}
 </script>
 <style scoped>
 .detail h1,
