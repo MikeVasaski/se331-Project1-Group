@@ -1,6 +1,6 @@
 version: "3.9"
 services:
   web:
-    image: "padungkiat/se331-project:latest"
+    image: "padungkiat/se331-gproject:latest"
     ports:
         - 8003:80
