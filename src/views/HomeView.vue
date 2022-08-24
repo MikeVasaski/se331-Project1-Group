@@ -95,6 +95,9 @@ export default {
 };
 </script>
 <style scoped>
+h1 {
+  color: #ffa633;
+}
 .home {
   display: flex;
   flex-direction: row;
@@ -123,7 +126,8 @@ export default {
   text-align: right;
 }
 .btn {
-  border: 2px solid #000;
-  background-color: brown;
+  border-radius: 5px;
+  border: 2px solid #4fb2aa;
+  background-color: #4fb2aa;
 }
 </style>

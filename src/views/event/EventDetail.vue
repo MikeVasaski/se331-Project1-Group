@@ -4,7 +4,7 @@
     <p><b>Age: </b>{{ people.age }}</p>
     <p><b>Address: </b>{{ people.hometown }}</p>
   </div>
-  <button @click="update">Update</button>
+  <button @click="update" class="btn">Update</button>
 </template>
 <script>
 export default {
@@ -30,5 +30,10 @@ p {
   align-items: center;
   margin: 12px 0px;
   text-align: left;
+}
+.btn {
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #ffa633;
 }
 </style>
