@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="review-form" @submit.prevent="onSubmit">
-      <h3>Doctor Suggestion</h3>
+      <h3>Doctor Comment</h3>
       <label for="suggestion">Comment:</label>
       <textarea id="suggestion" v-model="suggestion"></textarea>
 
@@ -73,7 +73,8 @@ body {
   padding: 20px;
   margin: 40px;
   border: 2px solid #000000;
-  background-color: #add8e6;
+  border-radius: 10px;
+  background-color: #e8d3a3;
   -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
   box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
@@ -122,12 +123,12 @@ ul {
 
 .button {
   margin: 30px;
-  background-color: #39495c;
+  background-color: #ffa633;
   border-radius: 5px;
   font-size: 18px;
   width: 100px;
   height: 60px;
-  color: white;
+  color: black;
   padding: 20px;
   box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
     inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),

@@ -1,6 +1,6 @@
 <template>
   <div class="vacc">
-    <p><b>Lastest Status </b></p>
+    <h1><b>Lastest Status </b></h1>
     <p><b>First dose </b></p>
     <p>
       Vaccine Name: <i>{{ people.vaccine_name }}</i>
@@ -16,7 +16,7 @@
       Date: <i>{{ people.vaccine_date2 }}</i>
     </p>
   </div>
-  <button @click="update">Update</button>
+  <button @click="update" class="btn">Update</button>
 </template>
 <script>
 export default {
@@ -29,5 +29,10 @@ export default {
   align-items: center;
   margin: 12px 0px;
   text-align: left;
+}
+.btn {
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #ffa633;
 }
 </style>

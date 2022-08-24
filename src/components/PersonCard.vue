@@ -35,7 +35,9 @@ export default {
   padding: 20px;
   width: 500px;
   cursor: pointer;
-  border: 1px solid #39495c;
+  border: 3px solid #4fb2aa;
+  border-radius: 10px;
+  background-color: #e8d3a3;
   margin-bottom: 18px;
 }
 .event-card img {
@@ -47,7 +49,7 @@ export default {
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
 .event-link {
-  color: #2c3e50;
+  color: black;
   text-decoration: none;
   text-align: left;
 }

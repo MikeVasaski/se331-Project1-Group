@@ -1,7 +1,7 @@
 <template>
   <div class="review-container">
     <div id="doctorSuggest-card">
-      <h3>Doctor's Suggestion:</h3>
+      <h3>Doctor Comment:</h3>
       <ul>
         <li v-for="(review, index) in reviews" :key="index">
           Date: {{ review.date }}
@@ -25,12 +25,14 @@ export default {
 
 <style>
 #doctorSuggest-card {
-  background-color: #e9f3f6;
+  background-color: #e8d3a3;
   padding: 20px;
   margin: auto;
+  border-radius: 10px;
   border: 2px solid #000000;
   width: 425px;
   margin-top: 20px;
+  padding: 3%;
 }
 li {
   text-align: left;
